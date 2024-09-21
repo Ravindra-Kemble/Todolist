@@ -12,10 +12,7 @@ app = FastAPI()
 
 
 origins = [
-    "http://127.0.0.1:5500",  # Your frontend origin
-    "http://localhost:5500",
-    "https://todolist-1-43my.onrender.com"  # You may also add this for localhost compatibility
-
+    "https://todo-app-2wwa.onrender.com"
 ]
 
 app.add_middleware(
