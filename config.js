@@ -1,4 +1,4 @@
 // config.js
-const API_URL = "http://127.0.0.1:8000/todos/"; 
+const API_URL = "https://todoapi-zg8q.onrender.com/todos/"; 
 
 export default API_URL;
