@@ -1,5 +1,5 @@
+# Backend
 # To-do list API
-# django-rest-api
 This is a simple RESTful API for managing a to-do list, built using FastAPI and SQLite. It supports basic CRUD operations for to-do items.
 
 ## Installation
@@ -64,4 +64,30 @@ This is a simple RESTful API for managing a to-do list, built using FastAPI and 
 3. **Delete a To-Do Item**:
    - DELETE /todos/{id}
      - Request: DELETE /todos/{id}
+    
+# Frontend
+To-Do List Frontend (Vanilla JavaScript)
+This is a simple To-Do List web application built with HTML, CSS, and Vanilla JavaScript. It connects to a backend To-Do List API to manage tasks through CRUD operations.
 
+Features
+1.Display a list of to-do items retrieved from the API.
+2.Add new to-do items.
+3.Mark to-do items as completed or delete them.
+4.Responsive UI design for different screen sizes.
+
+#### 1. Clone the Repository (As Both Frontend and Backend file are in same repo so not need to clone again)
+        ```sh
+        git clone https://github.com/Ravindra-Kemble/Todolist.git
+        cd Todolist
+    ```
+#### 2. Modify API Endpoint 
+Ensure that the frontend points to the correct backend API. In app.js, update the API_URL constant to match the URL where your API is running (e.g., http://127.0.0.1:8000 for local development).
+    ```sh
+        const API_URL = 'http://127.0.0.1:8000/todos';
+    ```
+
+#### 3. Open the Application in a Browser
+Since this is a simple HTML, CSS, and JavaScript project, you can open the index.html file directly in your browser.
+
+#### 4. Interacting with the API
+Once the application is running, it will automatically fetch and display the list of to-do items from the API. You can add new to-do items, mark them as completed, or delete them.
