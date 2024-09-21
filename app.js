@@ -51,6 +51,7 @@ const setupEventListeners = () => {
         button.addEventListener('click', () => {
             const id = button.getAttribute('data-id');
             deleteTodo(id);
+            location.reload();
         });
     });
 
@@ -64,6 +65,7 @@ const setupEventListeners = () => {
                 completed: button.getAttribute('data-completed') === 'true',
             };
             toggleComplete(id, currentTask);
+            location.reload();
         });
     });
 };
