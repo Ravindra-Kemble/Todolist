@@ -52,10 +52,13 @@ const setupEventListeners = () => {
             var result = confirm("Are you sure you want to delete a task?");
             if (result == false){
                 event.preventDefault()
+            else {
+                const id = button.getAttribute('data-id');
+                deleteTodo(id);
+                location.reload();
+                 }
             };
-            const id = button.getAttribute('data-id');
-            deleteTodo(id);
-            location.reload();
+            
         });
     });
 
