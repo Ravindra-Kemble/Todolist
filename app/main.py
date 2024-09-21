@@ -11,9 +11,6 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 
-# Mount the "static" directory to serve static files
-app.mount("/frontend", StaticFiles(directory="frontend", html=True), name="static")
-
 origins = [
     "http://127.0.0.1:5500",  # Your frontend origin
     "http://localhost:5500",
