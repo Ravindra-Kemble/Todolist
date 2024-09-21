@@ -14,7 +14,7 @@ const fetchTodos = async () => {
     } catch (error) {
         console.error('Error fetching todos:', error);
     }   
-};
+});
 
 
 // Display todos in the Dom
