@@ -51,10 +51,9 @@ const setupEventListeners = () => {
                 const id = button.getAttribute('data-id');
                 deleteTodo(id);
                 location.reload();  
-            });
-            
-        });
+         });    
     });
+};
 
     const toggleButtons = document.querySelectorAll('.toggle-complete');
     toggleButtons.forEach(button => {
@@ -67,9 +66,8 @@ const setupEventListeners = () => {
             };
             toggleComplete(id, currentTask);
             location.reload();
-        });
     });
-};
+});
 
 // Add a new Todo
 
