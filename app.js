@@ -54,7 +54,7 @@ const setupEventListeners = () => {
             };
             
         });
-    });
+    };
 
     const toggleButtons = document.querySelectorAll('.toggle-complete');
     toggleButtons.forEach(button => {
