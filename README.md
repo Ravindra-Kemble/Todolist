@@ -1,3 +1,7 @@
+# Live Demo
+You can view the live demo of the project here:
+[**Live To-Do List App**](https://ravindra-kemble.github.io/Todolist/)
+
 # Backend
 # To-do list API
 This is a simple RESTful API for managing a to-do list, built using FastAPI and SQLite. It supports basic CRUD operations for to-do items.
