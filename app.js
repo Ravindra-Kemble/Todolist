@@ -51,7 +51,7 @@ const setupEventListeners = () => {
                 const id = button.getAttribute('data-id');
                 deleteTodo(id);
                 location.reload();  
-            };
+            });
             
         });
     };
