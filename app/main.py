@@ -12,8 +12,9 @@ app = FastAPI()
 
 
 origins = [
-    "https://todo-app-2wwa.onrender.com"
-    "https://ravindra-kemble.github.io/Todolist/"
+    "https://todo-app-2wwa.onrender.com",
+    "https://ravindra-kemble.github.io/Todolist/",
+    "https://ravindra-kemble.github.io"
 ]
 
 app.add_middleware(
