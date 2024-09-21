@@ -10,6 +10,7 @@ const fetchTodos = async () => {
         const response = await fetch(apiUrl);
         const todos = await response.json()
         displayTodos(todos);
+        console.log(todos);
 
     } catch (error) {
         console.error('Error fetching todos:', error);
@@ -48,12 +49,11 @@ const setupEventListeners = () => {
     const deleteButtons = document.querySelectorAll('.delete');
     deleteButtons.forEach(button => {
         button.addEventListener('click', () => {
-                const id = button.getAttribute('data-id');
-                deleteTodo(id);
-                location.reload();  
-         });    
+            const id = button.getAttribute('data-id');
+            deleteTodo(id);
+            loaction.reload();
+        });
     });
-};
 
     const toggleButtons = document.querySelectorAll('.toggle-complete');
     toggleButtons.forEach(button => {
@@ -66,8 +66,9 @@ const setupEventListeners = () => {
             };
             toggleComplete(id, currentTask);
             location.reload();
+        });
     });
-});
+};
 
 // Add a new Todo
 
@@ -150,4 +151,5 @@ todoform.addEventListener('submit', (e) =>{
 
 // Initial fetch 
 fetchTodos();
+
 
