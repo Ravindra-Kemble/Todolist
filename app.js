@@ -10,7 +10,6 @@ const fetchTodos = async () => {
         const response = await fetch(apiUrl);
         const todos = await response.json()
         displayTodos(todos);
-        console.log(todos);
 
     } catch (error) {
         console.error('Error fetching todos:', error);
@@ -49,14 +48,9 @@ const setupEventListeners = () => {
     const deleteButtons = document.querySelectorAll('.delete');
     deleteButtons.forEach(button => {
         button.addEventListener('click', () => {
-            var result = confirm("Are you sure you want to delete a task?");
-            if (result == false){
-                event.preventDefault()
-            else {
                 const id = button.getAttribute('data-id');
                 deleteTodo(id);
-                location.reload();
-                 }
+                location.reload();  
             };
             
         });
