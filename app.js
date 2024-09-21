@@ -49,8 +49,13 @@ const setupEventListeners = () => {
     const deleteButtons = document.querySelectorAll('.delete');
     deleteButtons.forEach(button => {
         button.addEventListener('click', () => {
+            var result = confirm("Are you sure you want to delete a task?");
+            if (result == false){
+                event.preventDefault()
+            };
             const id = button.getAttribute('data-id');
             deleteTodo(id);
+            location.reload();
         });
     });
 
@@ -64,6 +69,7 @@ const setupEventListeners = () => {
                 completed: button.getAttribute('data-completed') === 'true',
             };
             toggleComplete(id, currentTask);
+            location.reload();
         });
     });
 };
